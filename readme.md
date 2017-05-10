@@ -11,7 +11,7 @@ You should now have the `pspb` command.
 
 ## Usage
 ```
-$ pspb --help
+$ pspb -h
 
   Usage: pspb [options]
 
@@ -19,8 +19,8 @@ $ pspb --help
 
     -h, --help           output usage information
     -V, --version        output the version number
-    -s, --source [path]  The path to the plugin directory. If not is included, assumes your current working directory.
-    -o, --output [path]  The path to the output directory. If not is included, assumes your current working directory.
+    -s, --source [path]  The path to the plugin directory. If none is given, assumes your current working directory.
+    -o, --output [path]  The path to the output directory. If none is given, assumes your current working directory.
     -q, --quiet          Do not log messages
 ```
 

@@ -25,8 +25,8 @@ const program = require('commander'),
 winston.cli()
 
 program.version(require('./package.json').version)
-  .option('-s, --source [path]', 'The path to the plugin directory. If not is included, assumes your current working directory.')
-  .option('-o, --output [path]', 'The path to the output directory. If not is included, assumes your current working directory.')
+  .option('-s, --source [path]', 'The path to the plugin directory. If none is given, assumes your current working directory.')
+  .option('-o, --output [path]', 'The path to the output directory. If none is given, assumes your current working directory.')
   .option('-q, --quiet', 'Do not log messages')
   .parse(process.argv)
 
