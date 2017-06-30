@@ -21,6 +21,7 @@ $ pspb -h
     -V, --version        output the version number
     -s, --source [path]  The path to the plugin directory. If none is given, assumes your current working directory.
     -o, --output [path]  The path to the output directory. If none is given, assumes your current working directory.
+    -i, --increment <type>  Increment the version found `plugin.xml` by release type (major, minor, path) [patch]
     -q, --quiet          Do not log messages
 ```
 
