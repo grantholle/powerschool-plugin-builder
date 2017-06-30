@@ -19,6 +19,7 @@
     "fs-extra": "^3.0.1",
     "normalize-path": "^2.1.1",
     "promise-sequential": "^1.1.1",
+    "semver": "^5.3.0",
     "winston": "^2.3.1",
     "xml2js": "^0.4.17"
   }
