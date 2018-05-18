@@ -1,11 +1,11 @@
 #! /usr/bin/env node
 'use strict'
 
-const program = require('commander'),
-      absolutePath = require('./lib/absolutePath'),
-      p = require('path'),
-      normalize = require('normalize-path'),
-      build = require('./lib/build')
+const program = require('commander')
+const absolutePath = require('./lib/absolutePath')
+const p = require('path')
+const normalize = require('normalize-path')
+const build = require('./lib/build')
 
 program.version(require('./package.json').version)
   .option('-s, --source [path]', 'The path to the plugin directory. If none is given, assumes your current working directory.', absolutePath, process.cwd())
