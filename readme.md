@@ -14,6 +14,12 @@ Due to the advent of `npx`, installation is no longer needed. If you want to ins
 $ npm i -g powerschool-plugin-builder
 ```
 
+Using npx:
+
+```
+$ npx powerschool-plugin-builder
+```
+
 You should now have the `pspb` command. However, all references will use `npx pspb` to run commands.
 
 ## Usage
