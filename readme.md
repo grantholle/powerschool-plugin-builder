@@ -1,20 +1,26 @@
-# PowerSchool Plugin Builder 💩
+# PowerSchool Plugin Builder
 
-> I found building a zip file that PowerSchool would accept to be an unnecessarily laborious venture, so I made this.
+Build a PowerSchool plugin zip file fast and easy with a cli.
+
+## Sponsor
+
+[<img src="https://www.archboard.io/assets/images/github.png" width="420" />](https://www.archboard.io)
 
 ## Install
+
+Due to the advent of `npx`, installation is no longer needed. If you want to install the cli globally, you can fun the following command.
 
 ```
 $ npm i -g powerschool-plugin-builder
 ```
 
-You should now have the `pspb` command.
+You should now have the `pspb` command. However, all references will use `npx pspb` to run commands.
 
 ## Usage
 
-```
-$ pspb -h
+Run `npx pspb -h` to see all the options:
 
+```
   Usage: pspb [options]
 
   Options:
@@ -27,39 +33,38 @@ $ pspb -h
     -q, --quiet          Do not log messages
 ```
 
-## Example
+### Example
 
 With [a bunch of] logging:
 
 ```
-$ pspb -s plugin/ -o /path/to/output/
-info:    Starting zip of /Users/user/plugin
-info:    Copied source directory to temporary directory
-info:    Cleaned .DS_Store from temporary directory
+$ npx pspb -s plugin/ -o /path/to/output/
+info:    Starting zip of /path/to/plugin
+info:    Removed existing build
+info:    Version is not incrementing
+info:    Copied source directory to temporary directory /path/to/temp/.temp-build
 info:    Cleaned .git from temporary directory
+info:    Cleaned node_modules from temporary directory
+info:    Cleaned package-lock.json from temporary directory
+info:    Cleaned package.json from temporary directory
+info:    Cleaned readme.md from temporary directory
 info:    Finished sanitizing temporary directory
-info:    Added entry ...
-info:    ...
-info:    ...
-info:    ...
-info:    ...
+info:    Added entry permissions_root/
+info:    Added entry permissions_root/vendor.permission_mappings.xml
+info:    Added entry plugin.xml
+info:    Added entry queries_root/
+...
 info:    Zip file created at /path/to/output/plugin.zip
-info:    Removed temporary directory
-info:    Build finished!
+info:    Removed temporary directory /path/to/temp/.temp-build
+info:    Build complete!
 ```
 
 With no logging:
 
 ```
-$ pspb -s plugin/ -o /path/to/output -q
+$ npx pspb -s plugin/ -o /path/to/output -q
 ```
 
-## Licence
+## License
 
-Copyright 2017-2018 Grant Holle
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+[MIT](LICENSE.md)
