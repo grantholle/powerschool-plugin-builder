@@ -35,6 +35,7 @@ Run `npx pspb -h` to see all the options:
     -V, --version        output the version number
     -s, --source [path]  The path to the plugin directory. If none is given, assumes your current working directory.
     -o, --output [path]  The path to the output directory. If none is given, assumes your current working directory.
+    -b, --build [path]   The path to the build directory. If none is given, assumes your current working directory.
     -i, --increment <type>  Increment the version found `plugin.xml` by release type (major, minor, patch) [patch]
     -q, --quiet          Do not log messages
 ```
